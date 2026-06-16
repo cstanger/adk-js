@@ -88,7 +88,7 @@ describe('CLI Entrypoint', () => {
       expect(AdkApiServer).toHaveBeenCalled();
       const args = (AdkApiServer as unknown as Mock).mock.calls[0]?.[0];
       expect(args).toBeDefined();
-      expect(args.port).toBe(8000);
+      expect(args.port).toBe(8080);
       expect(args.serveDebugUI).toBe(true);
       expect(args.a2a).toBe(false);
 
@@ -251,7 +251,7 @@ describe('CLI Entrypoint', () => {
 
       expect(deployToCloudRun).toHaveBeenCalledWith(
         expect.objectContaining({
-          port: 8000,
+          port: 8080,
           serviceName: 'adk-default-service-name',
           adkVersion: 'latest',
           withUi: false,

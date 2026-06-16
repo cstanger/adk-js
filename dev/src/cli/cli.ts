@@ -105,8 +105,8 @@ const HOST_OPTION = new Option(
 ).default('localhost');
 const PORT_OPTION = new Option(
   '-p, --port <number>',
-  'Optional. The port of the server',
-).default('8000');
+  'Optional. The port of the server. Default: 8080',
+).default('8080');
 const ORIGINS_OPTION = new Option(
   '--allow_origins <string>',
   'Optional. The allow origins of the server',
